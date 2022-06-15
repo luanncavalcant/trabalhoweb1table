@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+
+</head>
+<body page ='lista'>
+    <header class="header-index">
+        <h1 class="logo">Lc prestadora</h1>
+        <nav class="nav-index">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Admin</a>
+                    <ul>
+                        <li><a href="cadastro_empresa.html">Cadastrar empresa</a></li>
+                    </ul></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="listaRegistros">
+        <table>
+            <tr>
+                <th>CODIGO</th>
+                <th>EMPRESA</th>
+                <th>SERVICO</th>
+                <th>CONTATO</th>
+                <th>EMAIL</th>
+                <th>LOCAL</th>
+                <th></th>
+            </tr>
+            <tbody id="listaEmpresasBody"></tbody>
+        </table>
+    
+        <button onclick="vizualizar('cadastro', true)">Cadastrar</button> 
+    </div>
+
+    <form id="cadastroRegistros">
+        <span>Cadastro Empresa</span>
+        <label>CODIGO</label>
+            <input type="number" readonly id="id">
+        <label>EMPRESA</label>
+            <input type="txt" id="nomeEmpresa">
+        <label>SERVICO</label>
+            <input type="text" id="servico">
+        <label>CONTATO</label>
+            <input type="tel" id="contato">
+        <label>EMAIL</label>
+            <input type="email" id="email">
+        <label>LOCAL</label>
+            <input type="text" id="local">
+        <div>
+            <button>Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type="button">Cancelar</button>
+        </div>
+    </form>
+    
+</body>
+</html>

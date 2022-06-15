@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+:root{
+    --branco: #F2F2F2;
+    --cinza: #BFBFBF;
+    --cinza-escuro: #8C8C8C;
+    --preto-mais-claro: #262626;
+    --preto: #0D0D0D;
+    --hover-background-nav:#8c8c8c36;
+}
+
+.header-index{
+    background-color: var(--preto-mais-claro);
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    padding: 20px 0px 27px 0px;
+
+}
+
+.logo{
+    margin: 0px 5%;
+    font-family: 'Barlow', sans-serif;
+    color: var(--branco);
+    font-weight: 400;
+}
+.nav-index{
+    align-items: center;
+    margin-right: 10%;
+}
+.nav-index ul li{
+    position: relative;
+    display: inline;
+    padding: 15px;
+}
+.nav-index ul li a{
+    color: var(--branco);
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase
+}
+li:hover{
+    background-color:var(--hover-background-nav);
+    border-radius: 5%;
+}
+
+/*SUB-MENU DO INDEX*/
+li ul{
+    display: none;
+    padding-top:28px;
+    min-width: 14rem;
+    position:absolute;
+    left: 0px;
+}
+
+li ul li{
+    width:100% ;
+}
+  
+li:hover ul{
+    display: block;
+}
+
+/*PARTE DO FORMULARIO JAVASCRIPT*/
+
+#listaRegistros{display: none;}
+#cadastroRegistros{display: none;}
+
+body[page = 'lista'] #listaRegistros{
+    display: block;
+}
+body[page = 'cadastro'] #cadastroRegistros{
+    display: block;
+}
+button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:#3f7db8;
+    color: #fff;
+    margin: 3px;
+    padding: 5px 6px;
+}
+button.cinza{
+    background-color: #ccc;
+    color: #666;
+
+}
+button.vermelho{
+    background-color: #a00;
+    color:white;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+
+/*Minha parte*/
+#listaRegistros{
+    padding-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+table{
+    width: 100%;
+}
+th{
+    padding: 4px;
+    background-color: var(--preto-mais-claro);
+    color: white;
+}
+th,td{
+    text-align: center;
+    border: 1px solid black;
+}
+
+#cadastroRegistros{
+    border: 1px solid red;
+}
+label{
+    display: block;
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+input{
+    width: 90%;
+    border: 1px solid black;
+    padding: 5px;
+}
+form span{
+    font-size: 24px;
+}
+form{
+    margin-left: 25%;
+    /* margin-right: 24%; */
+    position: absolute;
+    width: 50%;
+    margin-top: 15%;
+    background-color: var(--cinza);
+}
